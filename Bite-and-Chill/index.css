@@ -1,10 +1,9 @@
-
 :root {
-  --primary-color: #a7754d; 
-  --primary-hover: #8a603e; 
-  --accent-color: #8a9a82; 
-  --text-color: #4a3b32; 
-  --bg-color: #fdfaf6; 
+  --primary-color: #a7754d;
+  --primary-hover: #8a603e;
+  --accent-color: #8a9a82;
+  --text-color: #4a3b32;
+  --bg-color: #fdfaf6;
   --surface-color: #ffffff;
   --font-family: "Tajawal", sans-serif;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -18,10 +17,12 @@
 }
 
 body {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-size: 18px;
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
 header {
@@ -40,7 +41,12 @@ header {
 }
 
 .logo i {
-  margin-right: 10px; 
+  margin-right: 10px;
+}
+
+.logo img {
+  height: 40px; /* يمكنك تعديل الارتفاع حسب حجم شعارك */
+  vertical-align: middle;
 }
 
 nav a {
@@ -70,30 +76,30 @@ nav a:hover {
 .btn-login:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column; 
-    align-items: flex-start; 
-    padding: 20px 5%; 
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
   }
 
   nav {
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    width: 100%; /
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   nav a {
-    display: block; 
-    margin: 15px 0; 
-    font-size: 18px; 
+    display: block;
+    margin: 15px 0;
+    font-size: 18px;
   }
 
   .btn-login {
-    width: 100%; 
-    text-align: center; 
+    width: 100%;
+    text-align: center;
   }
 }
