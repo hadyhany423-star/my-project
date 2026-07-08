@@ -1,0 +1,401 @@
+
+:root {
+  --primary-color: #537fe7;
+  --secondary-color: #e94560;
+  --background-dark: #0f0f24;
+  --background-light: #1a1a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --border-color: #3a3a5a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+.header {
+  background-color: rgba(15, 15, 36, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  margin-right: 25px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--primary-color);
+}
+
+.mobile-toggle {
+  display: none; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-primary);
+  margin: 5px 0;
+}
+
+
+#about {
+  background-color: var(--background-light);
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+}
+
+.profile-details .name {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+.profile-details .title {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.profile-details .description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.action-buttons .btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.btn-primary:hover {
+  background-color: #4369c3;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.skills-card {
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.skills-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.proficiency-item {
+  text-align: center;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.skill-progress {
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.proficiency-item:nth-child(3) .skill-progress {
+  width: 85% !important;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: none;
+  text-align: right;
+}
+
+.features-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 25px;
+}
+
+.features-list li::before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  right: 0;
+}
+.stats {
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+
+.stats .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+}
+
+#contact {
+  background-color: var(--background-light);
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  border-radius: 5px;
+}
+
+.contact-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.social-networks {
+  margin-top: 30px;
+}
+
+.social-item {
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-item:hover {
+  color: var(--primary-color);
+}
+
+
+.footer-section {
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--background-dark);
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none; 
+  }
+
+  .mobile-toggle {
+    display: block; 
+  }
+
+  .profile-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    display: flex;
+  }
+
+  .stats .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .profile-details .name {
+    font-size: 2.2rem;
+  }
+
+  .profile-details .title {
+    font-size: 1.2rem;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
