@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff9f43;
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul a {
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+header nav ul a:hover {
+    color: #ff9f43;
+}
+
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+#cart-count {
+    background-color: #ff3838;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('assets/profile.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem; 
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9f43;
+    color: #1a1a1a;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ee5253;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.menu-section, .booking-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.menu-section h2, .booking-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.menu-section h2::after, .booking-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff9f43;
+    margin: 10px auto 0;
+}
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: #eee;
+    border: none;
+    padding: 8px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #ff9f43;
+    color: #fff;
+}
+
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    width: 1000;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: right;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 15px 15px 5px;
+    font-size: 1.2rem;
+}
+
+.menu-item p {
+    padding: 0 15px 15px;
+    color: #666;
+    font-size: 0.9rem;
+    flex-grow: 1; 
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ee5253;
+}
+
+.add-to-cart-btn {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff9f43;
+}
+
+.booking-section {
+    background-color: #f1f2f6;
+}
+
+#booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#booking-form .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 6. الفوتر */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    header nav ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; 
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .menu-section, .booking-section {
+        padding: 40px 5%; 
+    }
+}
+@media (max-width: 480px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #booking-form {
+        padding: 20px 15px;
+    }
+    
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 13px; 
+    }

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebab & kofta grill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🍽️ Kebab & kofta grill</div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#menu">المنيو</a></li>
+                <li><a href="#book">حجز طاولة</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>طعم الأصالة في كل قمة</h1>
+            <p>أجود أنواع اللحوم والمأكولات الشرقية تُحضر يومياً خصيصاً لك.</p>
+            <a href="#menu" class="btn">اطلب الآن</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>منيو المطعم</h2>
+        
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="grill">مشويات</button>
+            <button class="filter-btn" data-filter="appetizers">مقبلات</button>
+            <button class="filter-btn" data-filter="drinks">مشروبات</button>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-item" data-category="grill">
+                <img src="assets/kabab.jpeg" alt="كباب وكفتة">
+                <h3>طبق كباب وكفتة مميز</h3>
+                <p>نصف كيلو من اللحم البلدي المشوي على الفحم.</p>
+                <div class="price-row">
+                    <span class="price">250 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="grill">
+                <img src="assets/tarab.jpg" alt="طرب">
+                <h3>طرب ضاني فاخر</h3>
+                <p>كفتة الحاتي البلدي الملفوفة بمنديل الضاني المقرمش والمشوي على الفحم.</p>
+                <div class="price-row">
+                    <span class="price">180 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/moza.jpg" alt="موزة مشوية">
+                <h3>موزة ضاني مشوية بالفرن</h3>
+                <p>موزة ضاني دايبة ومستوية على الفحم وتقدم مع أرز بالخلطة والمكسرات.</p>
+                <div class="price-row">
+                    <span class="price">320 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/cogo.jpg" alt="سجق مشوي">
+                <h3>طبق سجق بلدي مشوي</h3>
+                <p>سجق شرقي متبل بالثوم والبهارات ومشوي جريل مع شرائح البصل والفلفل.</p>
+                <div class="price-row">
+                    <span class="price">120 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/shesh.jpg" alt="شيش كباب">
+                <h3>شيش كباب لحم كندوز</h3>
+                <p>مكعبات لحم كندوز أحمر متبلة ومشويه بالتبادل مع البصل والطماطم الفريش.</p>
+                <div class="price-row">
+                    <span class="price">290 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/reiash.jpg" alt="ريش بتلو">
+                <h3>طبق ريش بتلو مشوية</h3>
+                <p>ريش بتلو خفيفة متبلة بماء البصل والبهارات الهادئة مشوية على نار هادئة.</p>
+                <div class="price-row">
+                    <span class="price">340 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="grill">
+                <img src="assets/kofta.jpg" alt="كفتة مشوية">
+                <h3>كيلو كفتة حاتي بلدي</h3>
+                <p>كفتة لحم بلدي متبلة بالخلطة السرية ومشوية على الفحم مباشرة.</p>
+                <div class="price-row">
+                    <span class="price">450 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/dash.jpg" alt="ريش ضاني">
+                <h3>طبق ريش ضاني فاخرة</h3>
+                <p>4 قطع من الريش الضاني المتبلة والمشوية بعناية مع الخضار المشوي.</p>
+                <div class="price-row">
+                    <span class="price">350 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/check.jpg" alt="دجاج مشوي">
+                <h3>نصف دجاجة مشوية على الفحم</h3>
+                <p>نصف دجاجة متبلة على الطريقة اللبنانية تقدم مع الثومية والبطاطس المحمرة.</p>
+                <div class="price-row">
+                    <span class="price">140 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/steak.jpg" alt="ستيك">
+                <h3>ريب آي ستيك مشوي</h3>
+                <p>قطعة ستيك ريب آي بقري مشوية على الجريل مع صوص المشروم الكريمي.</p>
+                <div class="price-row">
+                    <span class="price">390 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="grill">
+                <img src="assets/hawashi.jpg" alt="حواوشي">
+                <h3>رغيف حواوشي على الفحم</h3>
+                <p>خبز بلدي محشي باللحم المفروم المتبل والمشوي داخل ورق زبدة على الفحم.</p>
+                <div class="price-row">
+                    <span class="price">80 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+             <div class="menu-item" data-category="grill">
+                <img src="assets/burger.avif" alt="همبورغر">
+                <h3>همبورغر علي الفحم </h3>
+                <p> مصنوع من لحم بلدي 100 %</p>
+                <div class="price-row">
+                    <span class="price">40 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+
+<div class="menu-item" data-category="appetizers">
+                <img src="assets/mombar.jpeg" alt="ممبار">
+                <h3>طبق ممبار مقرمش</h3>
+                <p>ممبار بلدي محشي بالأرز المتبل بخلطة المحشي الشرقية ومحمر ذهبي.</p>
+                <div class="price-row">
+                    <span class="price">75 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/sabosa.jpeg" alt="سمبوسك">
+                <h3>طبق سمبوسك مشكل</h3>
+                <p>قطع من السمبوسك المقرمشة المحشية بالجبنة الموتزاريلا واللحم المفروم.</p>
+                <div class="price-row">
+                    <span class="price">60 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/kwar3.jpeg" alt="ورق عنب">
+                <h3>طاجن ورق عنب بالكوارع</h3>
+                <p>أصابع ورق عنب بالليمون تقدم ساخنة مع قطع الكوارع المخلية الدايبة.</p>
+                <div class="price-row">
+                    <span class="price">110 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/fries.jpeg" alt="بطاطس">
+                <h3>بطاطس محمرة بالبهارات</h3>
+                <p>أصابع بطاطس مقرمشة مضاف إليها بهارات الشرقية الخاصة وثومية.</p>
+                <div class="price-row">
+                    <span class="price">35 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/meshakl.jpeg" alt="ثومية وطحينة">
+               <h3>ميكس</h3>
+                <p>طبق مشكل يحتوي على طحينة حاتي، ثومية كريمي، وبابا غنوج مشوي.</p>
+                <div class="price-row">
+                    <span class="price">30 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/lesan.jpeg" alt="شوربة">
+                <h3>شوربة لسان عصفور</h3>
+                <p>شوربة لسان عصفور ساخنة.</p>
+                <div class="price-row">
+                    <span class="price">25 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/kaba.jpeg" alt="كبة">
+                <h3>كبة شامية باللحم</h3>
+                <p>4 قطع من الكبة المقرمشة المحشية باللحم المفروم المتبل وعين الجمل.</p>
+                <div class="price-row">
+                    <span class="price">80 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <img src="assets/green salad.jpeg" alt="سلطة">
+                <h3>سلطة خضراء طازجة</h3>
+                <p>خضروات موسمية طازجة</p>
+                <div class="price-row">
+                    <span class="price">40 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+
+<div class="menu-item" data-category="drinks">
+                <img src="assets/strawberry.jpeg" alt="فراولة">
+                <h3>عصير فراولة طبيعي</h3>
+                <p>عصير فراولة طازج ومبرد، محضر من حبات الفراولة الفريش.</p>
+                <div class="price-row">
+                    <span class="price">40 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/fruit.jpeg" alt="كوكتيل">
+                <h3>كوكتيل فواكه </h3>
+                <p>طبقات من عصير المانجو، الفراولة، والموز الحليب مع قطع الفواكه الطازجة.</p>
+                <div class="price-row">
+                    <span class="price">60 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/mohito.jpeg" alt="موهيتو بلوبيري">
+                <h3>موهيتو توت أزرق</h3>
+                <p>مزيج الصودا الباردة مع نكهة التوت الأزرق، الليمون، وأوراق النعناع.</p>
+                <div class="price-row">
+                    <span class="price">55 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/mrinda - Copy.jpeg" alt="ميرندا">
+                <h3>ميرندا برتقال كانز</h3>
+                <p>مشروب غازي بنكهة البرنس المنعشة، يقدم مثلجاً.</p>
+                <div class="price-row">
+                    <span class="price">25 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/guava.jpeg" alt="جوافة">
+                <h3>عصير جوافة باللبن</h3>
+                <p>جوافة فريش مضروبة بالحليب الطازج ونقاط الليمون لمنع تغيير اللون.</p>
+                <div class="price-row">
+                    <span class="price">40 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/ice tea - Copy.jpeg" alt="آيس تي">
+                <h3>شاي مثلج بالخوخ (Ice Tea)</h3>
+                <p>شاي بارد منعش بنكهة الخوخ الطبيعية وقطع الثلج.</p>
+                <div class="price-row">
+                    <span class="price">45 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="drinks">
+                <img src="assets/juice.jpeg" alt="عصير">
+                <h3>عصير برتقال فريش</h3>
+                <p>عصير برتقال طبيعي 100% بدون سكر مضاف.</p>
+                <div class="price-row">
+                    <span class="price">30 ج.م</span>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="booking-section">
+        <h2>احجز طاولتك الآن</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">الاسم بالكامل:</label>
+                <input type="text" id="name" required placeholder="الاسم...">
+            </div>
+            <div class="form-group">
+                <label for="guests">عدد الأفراد:</label>
+                <input type="number" id="guests" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="date">التاريخ:</label>
+                <input type="date" id="date" required>
+            </div>
+            <button type="submit" class="btn">تأكيد الحجز</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 | تم التطوير بواسطة هادي</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
